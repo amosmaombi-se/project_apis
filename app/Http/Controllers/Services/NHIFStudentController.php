@@ -44,7 +44,7 @@ class NHIFStudentController extends Controller
     {
         $member_info = array(
              "FormFourIndexNo": request('FormFourIndexNo'),
-             "FirstName": request('FirstName'),,
+             "FirstName": request('FirstName'),
              "MiddleName": request('MiddleName'),
              "Surname": request('Surname'),
              "AdmissionNo": request('AdmissionNo'),

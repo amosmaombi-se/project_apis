@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Payments\MPESAController;
 use App\Http\Controllers\Services\NHIFStudentController;
 use App\Http\Controllers\Communication\BeemSMSController;
+use App\Http\Controllers\Services\NIDAController;
+use App\Http\Controllers\Payments\AirtelControoler;
+use App\Http\Controllers\Payments\BeemPaymentController;
 
 
 
@@ -50,4 +53,18 @@ Route::group(['prefix'=>'beem'], function(){
     Route::delete('delete-template',[BeemSMSController::class,'deleteSMSTemplates']);
 });
 
+// BEEM  PAYMENT API 
+Route::group(['prefix'=>'beem'], function(){
+    Route::post('checkout',[BeemPaymentController::class,'checkOut']);
+});
 
+// NIDA  API 
+Route::group(['prefix'=>'nida'], function(){
+    Route::post('send',[NIDAController::class,'getPersonInformation']);
+});
+
+
+// Airtel Api
+Route::group(['prefix'=>'airtel'], function(){
+    Route::post('token',[AirtelControoler::class,'getAccessToken']);
+});
