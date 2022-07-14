@@ -16,7 +16,7 @@ class NIDAController extends Controller
 
            $url = self::$nida_url . '/'. $nationalId;
         
-       // $url = "https://ors.brela.go.tz/um/load/load_nida/19940514412170000228";
+       // $url = "https://ors.brela.go.tz/um/load/load_nida/123444444444444";
            $ch = curl_init();
 
             curl_setopt($ch, CURLOPT_URL, $url);
