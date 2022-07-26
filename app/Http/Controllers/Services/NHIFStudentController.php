@@ -43,20 +43,20 @@ class NHIFStudentController extends Controller
     public function memberRegistration()
     {
         $member_info = array(
-             "FormFourIndexNo": request('FormFourIndexNo'),
-             "FirstName": request('FirstName'),
-             "MiddleName": request('MiddleName'),
-             "Surname": request('Surname'),
-             "AdmissionNo": request('AdmissionNo'),
-             "CollageFaculty": request('Coet'),
-             "MobileNo": request('MobileNo'),// eg "07663434507",
-             "ProgrammeOfStudy": request('ProgrammeOfStudy') //eg "Civil Engineering",
-             "CourseDuration": request('CourseDuration'),//eg 4,
-             "MaritalStatus": request('MaritalStatus'),//,
-             "DateJoiningEmployer": request('DateJoiningEmployer'),
-             "DateOfBirth": request('DateOfBirth'),
-             "NationalID": request('NationalID'),  // eg"19930620141299000",
-             "Gender": request('Gender'),//
+             "FormFourIndexNo" => request('FormFourIndexNo'),
+             "FirstName"=>request('FirstName'),
+             "MiddleName"=>request('MiddleName'),
+             "Surname"=>request('Surname'),
+             "AdmissionNo"=>request('AdmissionNo'),
+             "CollageFaculty"=>request('Coet'),
+             "MobileNo"=>request('MobileNo'),// eg "07663434507",
+             "ProgrammeOfStudy"=>request('ProgrammeOfStudy'), //eg "Civil Engineering",
+             "CourseDuration"=>request('CourseDuration'),//eg 4,
+             "MaritalStatus"=>request('MaritalStatus'),//,
+             "DateJoiningEmployer"=>request('DateJoiningEmployer'),
+             "DateOfBirth"=>request('DateOfBirth'),
+             "NationalID"=>request('NationalID'),  // eg"19930620141299000",
+             "Gender"=>request('Gender'),//
         );
 
         $url = $this->member_registration_url;
