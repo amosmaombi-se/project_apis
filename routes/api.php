@@ -68,3 +68,8 @@ Route::group(['prefix'=>'nida'], function(){
 Route::group(['prefix'=>'airtel'], function(){
     Route::post('token',[AirtelControoler::class,'getAccessToken']);
 });
+
+// Twillio api
+Route::group(['prefix'=>'twilio'], function(){
+    Route::post('sendsms',[TwilioSMSController::class,'sendSMS']);
+});
