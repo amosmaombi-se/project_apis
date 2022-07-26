@@ -7,7 +7,8 @@ use App\Http\Controllers\Services\NHIFStudentController;
 use App\Http\Controllers\Communication\BeemSMSController;
 use App\Http\Controllers\Services\NIDAController;
 use App\Http\Controllers\Payments\AirtelControoler;
-use App\Http\Controllers\Payments\BeemPaymentController;
+use App\Http\Controllers\Payments\BeemPaymentController; 
+use App\Http\Controllers\PlayerController; 
 
 
 
@@ -73,3 +74,5 @@ Route::group(['prefix'=>'airtel'], function(){
 Route::group(['prefix'=>'twilio'], function(){
     Route::post('sendsms',[TwilioSMSController::class,'sendSMS']);
 });
+
+Route::post('/upload-content',[PlayerController::class,'uploadContent'])->name('import.content');

@@ -93,9 +93,9 @@ class BeemSMSController extends Controller
 
     public  function deleteSMSTemplates()
     {
-         $parameter_id = ['template_id'  => request('template_id')];
-         $url = $this->template_url . '?' . http_build_query($parameter_id);
-         $this->httpRequests($body,$url);
+         $body = ['template_id'  => request('template_id')];
+       //  $url = $this->template_url . '?' . http_build_query($parameter_id);
+        // $this->httpRequests($body,$url);
     }
 
 
